@@ -13,9 +13,13 @@ if i have a large database of directories, sub-directories and files, with presu
 if i simply encrypt the database ass a whole, when i decrypt said database, the entire thing is decrypted as a whole, subsequently exposing all data, even if I only want to access one file, correct?  this seems to unnecessarily expose my data as a whole.
 
 [encrypted database]
+
 v
+
 decryptDatabase()
+
 v
+
 decrypted database
 - files
 - sub-directories
