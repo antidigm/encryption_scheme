@@ -49,23 +49,35 @@ unencrypted database
 the encryption scheme that i have been conceptualizing is a bit different.  it encrypts the data from the bottom of the tree upwards, individually encrypting all files in the bottom-most directory, then zipping and encrypting their parent directory.  then recursively going up the tree until the entire database is encrypted.  what I THINK this solves for, comes when accessing data within the database. only directory names and file names of the specific directory and filenames of the accessed file path will be visible.  and how much name and filetype information that is exposed, can be obfuscated by how files and directories are named during the decryption process.
 
 [encrypted database]
+
 v
+
 decryptDatabase()
+
 v
+
 decrypted database
 - [encrypted files]
 - [encrypted sub-directories]
+
 v
+
 decryptSubDirectory()
+
 v
+
 decrypted database
 - [encrypted files]
 - decrypted sub-directory
   - [encrypted files]
   - [encrypted sub-directories]
+
 v
+
 decryptSubDirectory()
+
 v
+
 decrypted database
 - [encrypted files]
 - decrypted sub-directory
@@ -73,9 +85,13 @@ decrypted database
   - decrypted sub-directory
     - [encrypted files]
     - [encrypted sub-directories]
+
 v
+
 decryptFile()
+
 v
+
 decrypted database
 - [encrypted files]
 - decrypted sub-directory
